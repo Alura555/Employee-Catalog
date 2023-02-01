@@ -56,7 +56,7 @@ public class EmployeesController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("/employees/{employee_id}")
+    @GetMapping("/employees/{employeeId}")
     public EmployeeModel getEmployeeById(@PathVariable Long employeeId,
                                          @RequestParam(value = "full_chain", required = false) boolean fullChain){
         Optional<EmployeeModel> employeeModel = employeeService.getEmployeeById(employeeId);

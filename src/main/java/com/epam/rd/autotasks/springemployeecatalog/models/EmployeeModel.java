@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="EMPLOYEE")
-public class EmployeeModel implements Cloneable{
+public class EmployeeModel{
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
