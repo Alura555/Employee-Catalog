@@ -57,9 +57,9 @@ public class EmployeesController {
     }
 
     @GetMapping("/employees/{employee_id}")
-    public EmployeeModel getEmployeeById(@PathVariable Long employee_id,
+    public EmployeeModel getEmployeeById(@PathVariable Long employeeId,
                                          @RequestParam(value = "full_chain", required = false) boolean fullChain){
-        Optional<EmployeeModel> employeeModel = employeeService.getEmployeeById(employee_id);
+        Optional<EmployeeModel> employeeModel = employeeService.getEmployeeById(employeeId);
         if (employeeModel.isEmpty()){
             return null;
         }

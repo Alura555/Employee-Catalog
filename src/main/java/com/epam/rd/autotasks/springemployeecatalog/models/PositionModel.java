@@ -7,6 +7,7 @@ public enum PositionModel {
     CLERK,
     SALESMAN;
 
+    @Override
     public String toString() {
         switch (this) {
             case PRESIDENT:

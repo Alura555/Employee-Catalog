@@ -7,12 +7,7 @@ public class EmployeeDto extends EmployeeModel {
     @Override
     public void setManager(EmployeeModel manager) {
         if (manager!=null){
-            try {
-                super.manager = (EmployeeModel) manager.clone();
-            } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-            }
-            super.manager.setManager(null);
+            super.manager = new EmployeeModel(manager);
         } else {
             super.manager = null;
         }

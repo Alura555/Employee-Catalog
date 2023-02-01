@@ -35,10 +35,19 @@ public class EmployeeModel implements Cloneable{
     public EmployeeModel() {
     }
 
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public EmployeeModel(EmployeeModel model) {
+        if (model!=null) {
+            this.id = model.id;
+            this.department = model.department;
+            this.fullName = model.fullName;
+            this.hired = model.hired;
+            this.position = model.position;
+            this.salary = model.salary;
+            this.manager = null;
+        }
     }
+
+
 
     public long getId() {
         return id;
